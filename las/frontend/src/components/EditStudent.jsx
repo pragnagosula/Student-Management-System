@@ -10,7 +10,7 @@ function EditStudent() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://student-management-system-2zew.onrender.com/${id}`)
+    axios.get(`https://student-management-system-2zew.onrender.com/students/${id}`)
       .then(res => setFormData(res.data));
   }, [id]);
 
@@ -21,7 +21,7 @@ function EditStudent() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.put(`https://student-management-system-2zew.onrender.com/${id}`, formData);
+    await axios.put(`https://student-management-system-2zew.onrender.com/students/${id}`, formData);
     navigate('/students');
   };
 
