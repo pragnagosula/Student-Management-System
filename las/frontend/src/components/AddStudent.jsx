@@ -34,7 +34,7 @@ function AddStudent() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('https://student-management-system-2zew.onrender.com', formData);
+      await axios.post('https://student-management-system-2zew.onrender.com/students', formData);
       navigate('/students');
     } catch (error) {
       console.error('Error submitting form:', error);
